@@ -1,2 +1,2 @@
 # ArVaganov.github.io
-OfflineLayout
+Билд десткоп версии для второго задания
