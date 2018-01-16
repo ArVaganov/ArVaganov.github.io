@@ -313,7 +313,7 @@ hr {
   font-family: "HelveticaNeueMedium";
   src: url(fonts/HelveticaNeueCyr-Medium.woff) format("woff2"), url(fonts/HelveticaNeueCyr-Medium.ttf) format("ttf"), url(fonts/HelveticaNeueCyr-Medium.eot) format("eot"); }
 
-.floor__room-capacity {
+.floor__room-capacity, .floor__room-capacity_faded {
   font-family: "HelveticaNeue", Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
   line-height: 17px; }
 
@@ -345,6 +345,11 @@ hr {
   margin-bottom: 16px;
   font-size: 13px;
   color: black; }
+
+.floor__room-capacity_faded {
+  margin-bottom: 16px;
+  font-size: 13px;
+  color: #858E98; }
 
 .floor__room-title {
   font-size: 15px;
