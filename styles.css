@@ -54,12 +54,13 @@ body, #app, html, .react-app {
 .header {
   background-color: #fff;
   min-height: 71px;
-  box-shadow: 0 -1px 0 0 #e9ecef;
+  box-shadow: 0 1px 0 0 #e9ecef;
   display: flex;
   flex-direction: row;
   align-content: center;
   align-items: center;
-  z-index: 1; }
+  z-index: 1;
+  box-shadow: 0 1px 0 0 #e9ecef; }
 
 .header__logo {
   display: flex;
@@ -79,7 +80,6 @@ body, #app, html, .react-app {
   .header {
     position: fixed;
     min-height: 48px;
-    box-shadow: 0 1px 0 0 #e9ecef;
     width: 100%; } }
 @font-face {
   font-family: "HelveticaNeue";
@@ -315,8 +315,9 @@ body, #app, html, .react-app {
 
 @media all and (max-width: 750px) {
   .summary-dialog {
-    width: 300px;
-    z-index: 3; } }
+    width: 100%;
+    z-index: 3;
+    left: 0 !important; } }
 @font-face {
   font-family: "HelveticaNeue";
   src: url(fonts/HelveticaNeueCyr-Roman.woff) format("woff2"), url(fonts/HelveticaNeueCyr-Roman.ttf) format("ttf"), url(fonts/HelveticaNeueCyr-Roman.eot) format("eot"); }
@@ -679,6 +680,8 @@ body, #app, html, .react-app {
 
 .edit-meeting__footer {
   display: flex;
+  z-index: 3;
+  background-color: white;
   flex: 0 0 auto;
   height: 76px;
   box-shadow: 0 -1px 0 0 #e9ecef;
