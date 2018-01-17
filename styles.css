@@ -29,16 +29,15 @@ body, #app, html, .react-app {
   align-items: center;
   width: 100%; }
 
-.mobile-hidden {
-  display: none; }
-
 @media all and (max-width: 750px) {
   .row_align-end {
     margin-bottom: 24px;
     flex-direction: column;
     align-items: flex-start; }
   .row_align-top {
-    flex-direction: column; } }
+    flex-direction: column; }
+  .mobile-hidden {
+    display: none; } }
 @font-face {
   font-family: "HelveticaNeue";
   src: url(fonts/HelveticaNeueCyr-Roman.woff) format("woff2"), url(fonts/HelveticaNeueCyr-Roman.ttf) format("ttf"), url(fonts/HelveticaNeueCyr-Roman.eot) format("eot"); }
@@ -59,7 +58,7 @@ body, #app, html, .react-app {
   flex-direction: row;
   align-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: 3;
   box-shadow: 0 1px 0 0 #e9ecef; }
 
 .header__logo {
@@ -534,7 +533,8 @@ body, #app, html, .react-app {
   background-color: #e9ecef;
   border-radius: 100px;
   height: 24px;
-  width: 24px;
+  max-width: 25px;
+  min-width: 24px;
   cursor: pointer; }
   .calendar__icon-wrapper:hover .calendar__icon {
     opacity: 1; }
@@ -567,7 +567,6 @@ body, #app, html, .react-app {
 
 @media all and (max-width: 750px) {
   .calendar__icon-wrapper {
-    width: 34px;
     margin-right: 10px;
     margin-left: 10px; }
   .calendar__content {
@@ -913,13 +912,14 @@ body, #app, html, .react-app {
 @media all and (max-width: 750px) {
   .chosed-members__container {
     width: 100%;
-    height: 32px; }
+    height: 32px;
+    margin-right: 0; }
   .chosed-members__avatar {
     width: 32px;
     height: 32px; }
   .chosed-members__icon-wrapper {
-    height: 33px;
-    width: 32px; } }
+    height: 30px;
+    width: 33px; } }
 @font-face {
   font-family: "HelveticaNeue";
   src: url(fonts/HelveticaNeueCyr-Roman.woff) format("woff2"), url(fonts/HelveticaNeueCyr-Roman.ttf) format("ttf"), url(fonts/HelveticaNeueCyr-Roman.eot) format("eot"); }
@@ -1232,7 +1232,6 @@ body, #app, html, .react-app {
 
 .row_align-top {
   display: flex;
-  align-items: top;
   width: 100%; }
 
 .row_align-end {
