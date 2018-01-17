@@ -18,7 +18,7 @@
   outline: 0;
   background-color: transparent; }
 
-body, #app, main, html {
+body, #app, html, .react-app {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -41,6 +41,14 @@ body, #app, main, html {
 
 hr {
   display: none; }
+
+@media all and (max-width: 750px) {
+  .row_align-end {
+    margin-bottom: 24px;
+    flex-direction: column;
+    align-items: flex-start; }
+  .row_align-top {
+    flex-direction: column; } }
 @font-face {
   font-family: "HelveticaNeue";
   src: url(fonts/HelveticaNeueCyr-Roman.woff) format("woff2"), url(fonts/HelveticaNeueCyr-Roman.ttf) format("ttf"), url(fonts/HelveticaNeueCyr-Roman.eot) format("eot"); }
@@ -60,7 +68,8 @@ hr {
   display: flex;
   flex-direction: row;
   align-content: center;
-  align-items: center; }
+  align-items: center;
+  z-index: 1; }
 
 .header__logo {
   display: flex;
@@ -70,6 +79,18 @@ hr {
 .header__button-container {
   margin-left: auto;
   margin-right: 36px; }
+
+@media all and (max-width: 750px) {
+  .header__button-container {
+    display: none; }
+  .header__logo {
+    margin-left: 20.5px;
+    height: 21px; }
+  .header {
+    position: fixed;
+    min-height: 48px;
+    box-shadow: 0 1px 0 0 #e9ecef;
+    width: 100%; } }
 @font-face {
   font-family: "HelveticaNeue";
   src: url(fonts/HelveticaNeueCyr-Roman.woff) format("woff2"), url(fonts/HelveticaNeueCyr-Roman.ttf) format("ttf"), url(fonts/HelveticaNeueCyr-Roman.eot) format("eot"); }
@@ -301,6 +322,10 @@ hr {
   opacity: 0.7;
   display: flex;
   margin: auto; }
+
+@media all and (max-width: 750px) {
+  .summary-dialog {
+    width: 300px; } }
 @font-face {
   font-family: "HelveticaNeue";
   src: url(fonts/HelveticaNeueCyr-Roman.woff) format("woff2"), url(fonts/HelveticaNeueCyr-Roman.ttf) format("ttf"), url(fonts/HelveticaNeueCyr-Roman.eot) format("eot"); }
@@ -365,6 +390,15 @@ hr {
   font-size: 15px;
   color: #007dff;
   margin-bottom: 2px; }
+
+@media all and (max-width: 750px) {
+  .rooms-list {
+    position: absolute;
+    top: 146px; }
+  .floor__room-title_faded, .floor__room-title, .floor__room-capacity_faded, .floor__room-capacity {
+    visibility: hidden; }
+  .rooms-list {
+    box-shadow: initial; } }
 @font-face {
   font-family: "HelveticaNeue";
   src: url(fonts/HelveticaNeueCyr-Roman.woff) format("woff2"), url(fonts/HelveticaNeueCyr-Roman.ttf) format("ttf"), url(fonts/HelveticaNeueCyr-Roman.eot) format("eot"); }
@@ -386,7 +420,7 @@ hr {
 
 .graph-container {
   display: flex;
-  width: 1750px;
+  width: 100%;
   position: absolute;
   height: 100%; }
 
@@ -463,6 +497,10 @@ hr {
 
 .timeline__pointer-icon {
   pointer-events: none; }
+
+@media all and (max-width: 750px) {
+  .interactive-area {
+    height: initial; } }
 @font-face {
   font-family: "HelveticaNeue";
   src: url(fonts/HelveticaNeueCyr-Roman.woff) format("woff2"), url(fonts/HelveticaNeueCyr-Roman.ttf) format("ttf"), url(fonts/HelveticaNeueCyr-Roman.eot) format("eot"); }
@@ -522,6 +560,16 @@ hr {
 .calendar__current-date-container {
   display: flex;
   min-width: 130px; }
+
+@media all and (max-width: 750px) {
+  .calendar__icon-wrapper {
+    width: 34px;
+    margin-right: 10px;
+    margin-left: 10px; }
+  .calendar__content {
+    width: 100%; }
+  .calendar__current-date-container {
+    width: 100%; } }
 @font-face {
   font-family: "HelveticaNeue";
   src: url(fonts/HelveticaNeueCyr-Roman.woff) format("woff2"), url(fonts/HelveticaNeueCyr-Roman.ttf) format("ttf"), url(fonts/HelveticaNeueCyr-Roman.eot) format("eot"); }
@@ -546,6 +594,10 @@ hr {
   min-width: 245px;
   max-width: 245px; }
 
+.workplace__scroll-container {
+  display: flex;
+  flex: 1; }
+
 .workplace__right-column {
   display: flex;
   flex: 1 0 auto;
@@ -561,6 +613,25 @@ hr {
     border-radius: 100px; }
   .workplace__right-column::-webkit-scrollbar-thumb {
     background: #000; }
+
+@media all and (max-width: 750px) {
+  .workplace {
+    margin-top: 49px;
+    flex-direction: column; }
+  .workplace__left-column {
+    min-width: initial;
+    max-width: initial; }
+  .calendar {
+    height: 56px; }
+  .workplace__left-column {
+    flex-grow: 0; }
+  .workplace__right-column {
+    box-shadow: 0 -1px 0 0 #e9ecef; }
+  .workplace__scroll-container {
+    display: flex;
+    overflow-x: scroll; }
+    .workplace__scroll-container::-webkit-scrollbar {
+      display: none; } }
 @font-face {
   font-family: "HelveticaNeue";
   src: url(fonts/HelveticaNeueCyr-Roman.woff) format("woff2"), url(fonts/HelveticaNeueCyr-Roman.ttf) format("ttf"), url(fonts/HelveticaNeueCyr-Roman.eot) format("eot"); }
@@ -651,6 +722,12 @@ hr {
 .input-field {
   display: inline-flex;
   flex-direction: column; }
+
+@media all and (max-width: 750px) {
+  .input-field {
+    width: 100%; }
+  .input-field__control {
+    width: calc(100% - 11px); } }
 @font-face {
   font-family: "HelveticaNeue";
   src: url(fonts/HelveticaNeueCyr-Roman.woff) format("woff2"), url(fonts/HelveticaNeueCyr-Roman.ttf) format("ttf"), url(fonts/HelveticaNeueCyr-Roman.eot) format("eot"); }
@@ -804,6 +881,10 @@ hr {
   height: 24px;
   margin-left: auto;
   margin-right: 10px; }
+
+@media all and (max-width: 750px) {
+  .recommended-rooms__tile {
+    width: initial; } }
 @font-face {
   font-family: "HelveticaNeue";
   src: url(fonts/HelveticaNeueCyr-Roman.woff) format("woff2"), url(fonts/HelveticaNeueCyr-Roman.ttf) format("ttf"), url(fonts/HelveticaNeueCyr-Roman.eot) format("eot"); }
@@ -862,6 +943,10 @@ hr {
   padding: 0 16px;
   height: 37px;
   cursor: pointer; }
+
+@media all and (max-width: 750px) {
+  .selected-room__tile {
+    width: initial; } }
 @font-face {
   font-family: "HelveticaNeue";
   src: url(fonts/HelveticaNeueCyr-Roman.woff) format("woff2"), url(fonts/HelveticaNeueCyr-Roman.ttf) format("ttf"), url(fonts/HelveticaNeueCyr-Roman.eot) format("eot"); }
@@ -931,6 +1016,10 @@ hr {
 .select-scroll__floor {
   font-size: 13px;
   color: #858e98; }
+
+@media all and (max-width: 750px) {
+  .select-scroll {
+    width: initial; } }
 .modal__button-container {
   padding-top: 18px;
   display: flex;
@@ -1022,3 +1111,19 @@ hr {
   margin-right: 36px;
   display: flex;
   flex-direction: column; }
+
+@media all and (max-width: 750px) {
+  .create-meeting {
+    margin-top: 48px; }
+  .create-meeting__content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    width: initial;
+    position: relative; }
+  .row_align-end {
+    margin-bottom: 24px;
+    flex-direction: column;
+    align-items: flex-start; }
+  .column {
+    width: 100%; } }
