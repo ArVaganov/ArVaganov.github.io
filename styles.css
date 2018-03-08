@@ -1,4 +1,49 @@
 body, html {
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+}
+
+.header__title::first-letter {
+    color: #ff2338;
+}
+
+
+.container {
+    margin: 20px 200px 0 200px;
+}
+
+.content__item {
+    margin-bottom: 5px;
+}
+
+.item__date-fnished {
+    color: dimgray;
+    font-size: 12px;
+    display: block;
+}
+
+.item__sources-link {    
+    color: green;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.item__sources-link:link {
+    color: green;
+}
+
+.item__sources-link:hover {
+    color: rgb(139, 207, 38);
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        margin: 15px;
+    }
+    .header__title {
+        font-size: 20px;
+    }
 }
